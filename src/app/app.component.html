@@ -1,13 +1,15 @@
 <div class="container">
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
   <div class="row">
     <div class="col-xs-12">
-      <!-- <h3>Hello World</h3>
-      <hr />
-      <app-servers></app-servers> -->
-      <!-- <app-success></app-success>
-      <app-warning></app-warning> -->
-      <!-- <app-databinding></app-databinding> -->
-      <app-directives></app-directives>
+      <app-server-element
+        *ngFor="let element of serverElements"
+        [serverElement]="element"
+      ></app-server-element>
     </div>
   </div>
 </div>

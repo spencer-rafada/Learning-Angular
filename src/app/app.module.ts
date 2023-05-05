@@ -1,19 +1,23 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { WarningComponent } from './warning/warning.component';
-import { SuccessComponent } from './success/success.component';
-import { DatabindingComponent } from './databinding/databinding.component';
-import { DirectivesComponent } from './directives/directives.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
-  declarations: [AppComponent, ServerComponent, ServersComponent, WarningComponent, SuccessComponent, DatabindingComponent, DirectivesComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    CockpitComponent,
+    ServerElementComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
