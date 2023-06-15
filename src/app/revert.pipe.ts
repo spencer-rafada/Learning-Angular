@@ -1,12 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'revert'
+  name: 'revert',
 })
 export class RevertPipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any): any {
+    return value.split('').reverse().join('');
   }
-
 }
